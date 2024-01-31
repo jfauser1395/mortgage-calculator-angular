@@ -4,10 +4,13 @@ import { Component } from '@angular/core';
   selector: 'app-first',
   standalone: true,
   imports: [],
-  templateUrl: './first.component.html',
+  template: `
+  <p>first works!: {{ newProject }}</p>
+  `,
   styleUrl: './first.component.scss'
 })
 export class FirstComponent {
+  newProject = 'this is a new Project pals!' 
   taskTitle = '';
   isComplete = false;
   completeTask() {
