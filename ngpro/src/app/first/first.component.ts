@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './first.component.scss'
 })
 export class FirstComponent {
-
+  taskTitle = '';
+  isComplete = false;
+  completeTask() {
+    this.isComplete = true;
+  }
+  updateTitle(newTitle: string) {
+    this.taskTitle = newTitle;
+  }
 }
