@@ -1,22 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MonthlyMortgageCalculationService } from '../monthly-mortgage-calculation.service';
 
 @Component({
   selector: 'app-first',
   standalone: true,
   imports: [],
-  template: `
-  <p>first works!: {{ newProject }}</p>
-  `,
+  templateUrl: './first.component.html',
   styleUrl: './first.component.scss'
 })
 export class FirstComponent {
-  newProject = 'this is a new Project pals!' 
-  taskTitle = '';
-  isComplete = false;
-  completeTask() {
-    this.isComplete = true;
-  }
-  updateTitle(newTitle: string) {
-    this.taskTitle = newTitle;
-  }
+  private monthlyMortgageCalculationService = inject(MonthlyMortgageCalculationService);
+  monthlyCosts = this.monthlyMortgageCalculationService.monthlyMortgagePayment(4, 23, 4)
 }
