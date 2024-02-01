@@ -4,11 +4,17 @@ import { RouterOutlet } from '@angular/router';
 import { FirstComponent } from './first/first.component'
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, FirstComponent],
-  templateUrl: './app.component.html',
+  template: `
+    <div>
+      <h1>This is my first Angular application</h1>
+      <app-first></app-first>
+    </div>
+    `,
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
