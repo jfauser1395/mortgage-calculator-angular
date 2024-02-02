@@ -8,6 +8,22 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+  <h2>Please enter your mortgage conditions into the fields below</h2>
+<form>
+  <div>
+    <label for="principalLoan">Principal loan in USD:</label>
+    <input type="text" id="principalLoan">
+    
+    <label for="yearlyInterestRate">Annual interest rate in %:</label>
+    <input type="text" id="yearlyInterestRate">
+    
+    <label for="numberOfYearsPayments">Desired payment span in years:</label>
+    <input type="text" id="numberOfYearsPayments">
+    
+    <button type="submit" id="calculateButton">Calculate</button>
+  </form>
+
   <app-root></app-root>
+
 </body>
 </html>
