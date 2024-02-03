@@ -6,26 +6,13 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+  background-color: gray;
+}
+  </style>
 </head>
-<body class="mat-typography">
-  <h2>Please enter your mortgage conditions into the fields below</h2>
-<form>
-  <div>
-    <label for="principalLoan">Principal loan in USD:</label>
-    <input type="text" id="principalLoan">
-    
-    <label for="yearlyInterestRate">Annual interest rate in %:</label>
-    <input type="text" id="yearlyInterestRate">
-    
-    <label for="numberOfYearsPayments">Desired payment span in years:</label>
-    <input type="text" id="numberOfYearsPayments">
-    
-    <button type="submit" id="calculateButton">Calculate</button>
-  </form>
-
+<body>
   <app-root></app-root>
-
 </body>
 </html>

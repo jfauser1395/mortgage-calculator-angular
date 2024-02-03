@@ -1,20 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { FirstComponent } from './first/first.component'
-
+import { LoanFormParametersComponent } from './loan-form-parameters/loan-form-parameters.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FirstComponent],
-  template: `
-    <div>
-      <h1>This is my first Angular application</h1>
-      <app-first></app-first>
-    </div>
-    `,
+  imports: [CommonModule, RouterOutlet, LoanFormParametersComponent],
+  templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {

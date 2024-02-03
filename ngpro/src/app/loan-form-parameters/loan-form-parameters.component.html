@@ -1,0 +1,31 @@
+<section>
+    <h2>Please enter your mortgage conditions into the fields below</h2>
+      <p>
+        <label for="principalLoan">Principal loan in USD:</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Amount</mat-label>
+          <input id="principalLoan" matInput type="number" class="example-right-align" placeholder="0">
+          <span matTextPrefix>$&nbsp;</span>
+        </mat-form-field>
+      </p>
+      <p>
+      <label for="yearlyInterestRate">Annual interest rate in %:</label>
+      <mat-form-field appearance="outline">
+        <mat-label>Amount</mat-label>
+        <input id="yearlyInterestRate" matInput type="number" class="example-right-align" placeholder="0">
+        <span matTextPrefix>%&nbsp;</span>
+      </mat-form-field>
+      </p>
+      <p>
+      <label for="numberOfYearsPayments">Desired payment span in years:</label>
+      <mat-form-field appearance="outline">
+        <mat-label>years</mat-label>
+        <mat-select id="numberOfYearsPayments">
+          <mat-option value="1">1</mat-option>
+          <mat-option value="accent">2</mat-option>
+          <mat-option value="warn">3</mat-option>
+        </mat-select>
+      </mat-form-field>
+      </p>
+      <button type="submit" id="calculateButton">Calculate</button>
+  </section>
