@@ -1,17 +1,17 @@
 <section>
+  <h2 fxLayoutAlign="center" >Mortgage Calculator</h2>
   <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" class="form-background">
-    <h2>Mortgage Calculator</h2>
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" class="mat-form-field">
         <mat-label>Home price</mat-label>
         <input id="principalLoan" matInput type="text" class="left-align" placeholder="0">
         <span matTextPrefix="">$&nbsp;</span>
       </mat-form-field>
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" class="mat-form-field">
         <mat-label>Interest rate</mat-label>
         <input id="yearlyInterestRate" matInput type="text" class="left-align" placeholder="0">
         <span matTextSuffix>%&nbsp;</span>
       </mat-form-field>
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" class="mat-form-field">
         <mat-label>Loan term</mat-label>
         <mat-select id="numberOfYearsPayments">
           <mat-option disabled="disabled">Select a loan term</mat-option>
@@ -21,6 +21,6 @@
           <mat-option value="10">10 years</mat-option>
         </mat-select>
       </mat-form-field>
-      <button type="submit" id="calculateButton" mat-raised-button color="primary">Calculate</button>
-    </div>
+      <button type="submit" id="calculateButton" mat-raised-button color="primary" class="mat-form-field">Calculate</button>
+  </div>
 </section>
