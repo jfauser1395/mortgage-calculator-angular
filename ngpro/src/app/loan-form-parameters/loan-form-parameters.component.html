@@ -8,9 +8,10 @@
       </mat-form-field>
       <mat-form-field appearance="outline" class="mat-form-field">
         <mat-label>Interest rate</mat-label>
-        <input id="yearlyInterestRate" matInput type="text" class="left-align" placeholder="0">
+        <input id="yearlyInterestRate" matInput type="text" class="left-align" placeholder="0" (click) ="showData($event)">
         <span matTextSuffix>%&nbsp;</span>
       </mat-form-field>
+      <p>{{ value }}</p>
       <mat-form-field appearance="outline" class="mat-form-field">
         <mat-label>Loan term</mat-label>
         <mat-select id="numberOfYearsPayments">

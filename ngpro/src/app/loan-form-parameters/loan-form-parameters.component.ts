@@ -26,7 +26,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   styleUrl: './loan-form-parameters.component.scss'
 })
 export class LoanFormParametersComponent {
-  
+  value = '';
+
+  showData(event: any) {
+    this.value += event.target.value;
+  }
+
   private monthlyMortgageCalculationService = inject(MonthlyMortgageCalculationService);
   monthlyCosts = this.monthlyMortgageCalculationService.monthlyMortgagePayment(4, 23, 4)
 }
