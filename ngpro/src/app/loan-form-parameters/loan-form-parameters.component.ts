@@ -28,8 +28,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 export class LoanFormParametersComponent {
   value = '';
 
-  showData(event: any) {
-    this.value += event.target.value;
+  onSubmit() {
+    this.value // hast to be continued here!
   }
 
   private monthlyMortgageCalculationService = inject(MonthlyMortgageCalculationService);
