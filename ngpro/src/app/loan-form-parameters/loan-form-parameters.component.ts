@@ -4,8 +4,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatSelectModule} from '@angular/material/select';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 
@@ -26,12 +26,21 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   styleUrl: './loan-form-parameters.component.scss'
 })
 export class LoanFormParametersComponent {
-  value = '';
-
-  onSubmit() {
-    this.value // hast to be continued here!
+  constructor(private monthlyMortgageCalculationService: MonthlyMortgageCalculationService){
+    this.monthlyCosts = 0;
   }
 
-  private monthlyMortgageCalculationService = inject(MonthlyMortgageCalculationService);
-  monthlyCosts = this.monthlyMortgageCalculationService.monthlyMortgagePayment(4, 23, 4)
+  principalLoan = new FormControl('');
+  yearlyInterestRate = new FormControl('');
+  numberOfYearsPayments = new FormControl('');
+
+  monthlyCosts: number;
+
+  onSubmit() {
+    let pLoan = Number(this.principalLoan.value);
+    let yInterestRate = Number(this.yearlyInterestRate.value);
+    let nOfYearsPayments = Number(this.numberOfYearsPayments.value);
+
+    this.monthlyCosts = this.monthlyMortgageCalculationService.monthlyMortgagePayment(pLoan, yInterestRate, nOfYearsPayments)
+  }
 }

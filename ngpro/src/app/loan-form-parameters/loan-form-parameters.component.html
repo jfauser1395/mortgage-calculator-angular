@@ -4,18 +4,17 @@
     <form (ngSubmit)="onSubmit()">
       <mat-form-field appearance="outline" class="mat-form-field">
         <mat-label>Home price</mat-label>
-        <input id="principalLoan" matInput type="text" class="left-align" placeholder="0">
+        <input [formControl]="principalLoan" matInput type="text" class="left-align" placeholder="0">
         <span matTextPrefix="">$&nbsp;</span>
       </mat-form-field>
       <mat-form-field appearance="outline" class="mat-form-field">
         <mat-label>Interest rate</mat-label>
-        <input id="yearlyInterestRate" matInput type="text" class="left-align" placeholder="0">
+        <input [formControl]="yearlyInterestRate" matInput type="text" class="left-align" placeholder="0">
         <span matTextSuffix>%&nbsp;</span>
       </mat-form-field>
-      <p>{{ value   }}</p>
       <mat-form-field appearance="outline" class="mat-form-field">
         <mat-label>Loan term</mat-label>
-        <mat-select id="numberOfYearsPayments">
+        <mat-select [formControl]="numberOfYearsPayments">
           <mat-option disabled="disabled">Select a loan term</mat-option>
           <mat-option value="30">30 years</mat-option>
           <mat-option value="20">20 years</mat-option>
@@ -26,4 +25,5 @@
       <button type="submit" id="calculateButton" mat-raised-button color="primary" class="mat-form-field">Calculate</button>
     </form>
   </div>
+  <p fxLayoutAlign="center">Your monthly Costs: {{ monthlyCosts }}</p>
 </section>
