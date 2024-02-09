@@ -41,6 +41,10 @@ export class LoanFormParametersComponent {
     let yInterestRate = Number(this.yearlyInterestRate.value);
     let nOfYearsPayments = Number(this.numberOfYearsPayments.value);
 
+    console.log('This is the principal loan: ' + pLoan + '\n This is the yearly interest rates:' + yInterestRate + '\n This is the number of years payed: ' + nOfYearsPayments)
+
     this.monthlyCosts = this.monthlyMortgageCalculationService.monthlyMortgagePayment(pLoan, yInterestRate, nOfYearsPayments)
+    
+    console.log('Result: ' + this.monthlyCosts)
   }
 }

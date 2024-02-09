@@ -5,13 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class MonthlyMortgageCalculationService {
   // Declare the monthlyMortgagePayment function to calculate the monthly payment to the second decimal number
-monthlyMortgagePayment(principalLoan:number, rate:number, numberOfPayments:number) {
-    // P is the principal loan amount
-    // r is the monthly interest rate
-    // n is the number of payments
+monthlyMortgagePayment(principalLoan:number, rate:number, numberOfYearsPayments:number) {
 
-    // The formula to calculate the monthly payment is (P * r) / (1 - (1 + r) ^ -n)
-    // The Math.pow function is used to calculate (1 + r) to the power of -n
-    return  (principalLoan * rate) / (1 - Math.pow(1 + rate, -numberOfPayments));
+    let monthlyInterestRate = rate / 100 / 12;
+    let numberOfPayments = numberOfYearsPayments * 12
+    
+    return  (principalLoan * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
   }
 }
+
