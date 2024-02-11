@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LoanFormParametersComponent } from './loan-form-parameters.component';
 
 describe('LoanFormParametersComponent', () => {

@@ -1,11 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { MonthlyMortgageCalculationService } from '../services/monthly-mortgage-calculation.service';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatSelectModule } from '@angular/material/select';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 
@@ -13,11 +8,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   selector: 'app-loan-form-parameters',
   standalone: true,
   imports: [
-    MatFormFieldModule, 
-    MatInputModule, 
-    MatIconModule,
-    MatButtonModule, 
-    MatSelectModule,
     FormsModule, 
     ReactiveFormsModule,
     FlexLayoutModule
