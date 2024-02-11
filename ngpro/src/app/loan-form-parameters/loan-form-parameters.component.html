@@ -1,29 +1,24 @@
 <section>
-  <h2 fxLayoutAlign="center" class="text-3xl font-bold underline" >Mortgage Calculator</h2>
-  <div fxLayout="column" fxLayoutGap="10px" class="form-background">
+  <h2 class="text-3xl font-bold underline">Mortgage Calculator</h2>
+  <div  class="form-background">
     <form (ngSubmit)="onSubmit()">
-      <mat-form-field appearance="outline" class="mat-form-field">
-        <mat-label>Home price</mat-label>
-        <input [formControl]="principalLoan" matInput type="text"  placeholder="0">
-        <span matTextPrefix="">$&nbsp;</span>
-      </mat-form-field>
-      <mat-form-field appearance="outline" class="mat-form-field">
-        <mat-label>Interest rate</mat-label>
-        <input [formControl]="yearlyInterestRate" matInput type="text"  placeholder="0">
-        <span matTextSuffix>%&nbsp;</span>
-      </mat-form-field>
-      <mat-form-field appearance="outline" class="mat-form-field">
-        <mat-label>Loan term</mat-label>
-        <mat-select [formControl]="numberOfYearsPayments">
-          <mat-option disabled="disabled">Select a loan term</mat-option>
-          <mat-option value="30">30 years</mat-option>
-          <mat-option value="20">20 years</mat-option>
-          <mat-option value="15">15 years</mat-option>
-          <mat-option value="10">10 years</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <button type="submit" id="calculateButton" mat-raised-button color="primary" class="mat-form-field">Calculate</button>
+      <label>Home price</label>
+      <input [formControl]="principalLoan" placeholder="0">
+      
+      <label>Interest rate</label>
+      <input [formControl]="yearlyInterestRate" placeholder="0">
+      
+      <label>Loan term</label>
+      <select [formControl]="numberOfYearsPayments">
+        <option disabled="disabled">Select a loan term</option>
+        <option value="30">30 years</option>
+        <option value="20">20 years</option>
+        <option value="15">15 years</option>
+        <option value="10">10 years</option>
+      </select>
+
+      <button type="submit">Calculate</button>
     </form>
   </div>
-  <p class="result-paragraph"><span matTextPrefix="">Your monthly costs: $&nbsp;{{ monthlyCosts }}</span></p>
+  <p class="result-paragraph"><span >Your monthly costs: {{ monthlyCosts }}</span></p>
 </section>
