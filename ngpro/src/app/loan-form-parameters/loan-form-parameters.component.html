@@ -1,7 +1,7 @@
-<section class="container">
-  <h2 class="text-center text-3xl font-bold underline break-after-auto">Mortgage Calculator</h2>
-  <div class="container mx-auto px-6">
-    <form (ngSubmit)="onSubmit()">
+<section>
+  <h2 class="flex-auto text-center p-5">Mortgage Calculator</h2>
+  <div  class="flex-auto p-9 justify-center items-center">
+    <form class="space-y-4" (ngSubmit)="onSubmit()">
       <label class="block">
         <span class="block text-sm font-medium text-slate-700">Home price</span>
         <input [formControl]="principalLoan" placeholder="0" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-non invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
@@ -21,8 +21,8 @@
         <option value="10">10 years</option>
       </select>
       </label>
-      <button type="submit" class=" shadow-indigo-500/40 rounded-full bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ...">Calculate</button>
+      <button type="submit" class="shadow-indigo-500/40 rounded-full bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ...">Calculate</button>
     </form>
   </div>
-  <p class="result-paragraph"><span >Your monthly costs: {{ monthlyCosts }}</span></p>
+  <p class="flex-auto text-center p-5">Your monthly costs: <span >{{ monthlyCosts }} $</span></p>
 </section>
