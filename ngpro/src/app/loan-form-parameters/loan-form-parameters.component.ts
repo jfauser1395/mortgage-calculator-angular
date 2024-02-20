@@ -17,7 +17,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 })
 export class LoanFormParametersComponent {
   constructor(private monthlyMortgageCalculationService: MonthlyMortgageCalculationService){
-    this.monthlyCosts = 0;
+    this.monthlyCosts = '';
   }
 
   principalLoan = new FormControl('');
