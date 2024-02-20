@@ -10,7 +10,13 @@ monthlyMortgagePayment(principalLoan:number, rate:number, numberOfYearsPayments:
     let monthlyInterestRate = rate / 100 / 12;
     let numberOfPayments = numberOfYearsPayments * 12
     
-    return  (principalLoan * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
-  }
-}
+    let result = (principalLoan * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
 
+    if(principalLoan !== 0) {
+      return `${result} $`
+    } 
+    else {
+      return 'Please enter all fields!'
+    }
+  } 
+}

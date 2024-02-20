@@ -24,7 +24,7 @@ export class LoanFormParametersComponent {
   yearlyInterestRate = new FormControl('');
   numberOfYearsPayments = new FormControl('');
 
-  monthlyCosts: number;
+  monthlyCosts: number | string;
 
   onSubmit() {
     let pLoan = Number(this.principalLoan.value);
