@@ -14,7 +14,7 @@ monthlyMortgagePayment(principalLoan:number, rate:number, numberOfYearsPayments:
     let finalMonthlyPayment = result.toFixed(2)
 
     if((principalLoan && rate && numberOfYearsPayments) !== 0) {
-      return `Your monthly costs ${finalMonthlyPayment} $`
+      return `Your monthly costs: ${finalMonthlyPayment} $`
     } 
     else {
       return 'Please enter all fields!'
