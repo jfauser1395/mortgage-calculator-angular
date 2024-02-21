@@ -1,19 +1,19 @@
 <section>
-  <h2 class="flex-auto text-center p-5">Mortgage Calculator</h2>
+  <h1 class="text-center text-4xl font-serif p-3">Mortgage Calculator</h1>
   <div  class="flex-auto p-9 justify-center items-center">
     <form class="space-y-4" (ngSubmit)="onSubmit()">
       <label class="block">
         <span class="block text-sm font-medium text-slate-700">Home price</span>
-        <input [formControl]="principalLoan" placeholder="0" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-non invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
+        <input [formControl]="principalLoan" placeholder="0.00" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-non invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
       </label>
       
       <label class="block">
         <span class="block text-sm font-medium text-slate-700">Interest rate</span>
-        <input [formControl]="yearlyInterestRate" placeholder="0" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-non invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
+        <input [formControl]="yearlyInterestRate" placeholder="0.00" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-non invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
       </label>
       <label class="block">
       <span class="block text-sm font-medium text-slate-700">Loan term</span>
-      <select [formControl]="numberOfYearsPayments" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-non invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
+      <select [formControl]="numberOfYearsPayments" placeholder="Select a loan term" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-non invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 rounded-md">
         <option disabled="disabled">Select a loan term</option>
         <option value="30">30 years</option>
         <option value="20">20 years</option>
@@ -21,7 +21,7 @@
         <option value="10">10 years</option>
       </select>
       </label>
-      <button type="submit" class="shadow-indigo-500/40 rounded-full bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ...">Calculate</button>
+      <button type="submit" class=" rounded-md font-semibold text-sm text-white px-3 py-2 w-full  shadow-indigo-500/40 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring ">Calculate</button>
     </form>
   </div>
   <p class="flex-auto text-center p-5"><span >{{ monthlyCosts }}</span></p>

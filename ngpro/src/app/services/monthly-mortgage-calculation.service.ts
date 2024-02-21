@@ -11,9 +11,10 @@ monthlyMortgagePayment(principalLoan:number, rate:number, numberOfYearsPayments:
     let numberOfPayments = numberOfYearsPayments * 12
     
     let result = (principalLoan * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
+    let finalMonthlyPayment = result.toFixed(2)
 
     if((principalLoan && rate && numberOfYearsPayments) !== 0) {
-      return `Your monthly costs ${result} $`
+      return `Your monthly costs ${finalMonthlyPayment} $`
     } 
     else {
       return 'Please enter all fields!'
