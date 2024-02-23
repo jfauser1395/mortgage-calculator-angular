@@ -11,32 +11,32 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   styleUrl: './loan-form-parameters.component.scss',
 })
 export class LoanFormParametersComponent {
-  constructor(
-    private monthlyMortgageCalculationService: MonthlyMortgageCalculationService,
-  ) {
-    this.monthlyCosts = '';
-  }
-
+  // Form controls for the loan parameters
   principalLoan = new FormControl('');
   yearlyInterestRate = new FormControl('');
   numberOfYearsPayments = new FormControl('Select a loan term');
 
-  monthlyCosts: number | string;
+  // Variable to store the calculated monthly costs
+  monthlyCosts: number | string = '';
 
+  // Injecting the mortgage calculation service
+  constructor(
+    private monthlyMortgageCalculationService: MonthlyMortgageCalculationService,
+  ) {}
+
+  // Method to handle form submission
   onSubmit() {
+    // Parsing form control values to numbers
     let pLoan = Number(this.principalLoan.value);
     let yInterestRate = Number(this.yearlyInterestRate.value);
     let nOfYearsPayments = Number(this.numberOfYearsPayments.value);
 
+    // Logging the parsed values
     console.log(
-      'This is the principal loan: ' +
-        pLoan +
-        '\n This is the yearly interest rates:' +
-        yInterestRate +
-        '\n This is the number of years payed: ' +
-        nOfYearsPayments,
+      `Principal loan: ${pLoan}\nYearly interest rate: ${yInterestRate}\nNumber of years: ${nOfYearsPayments}`,
     );
 
+    // Calculating the monthly costs using the mortgage calculation service
     this.monthlyCosts =
       this.monthlyMortgageCalculationService.monthlyMortgagePayment(
         pLoan,
@@ -44,6 +44,7 @@ export class LoanFormParametersComponent {
         nOfYearsPayments,
       );
 
-    console.log('Result: ' + this.monthlyCosts);
+    // Logging the calculated monthly costs
+    console.log(`Monthly costs: ${this.monthlyCosts}`);
   }
 }
