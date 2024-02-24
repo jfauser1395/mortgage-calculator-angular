@@ -12,9 +12,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 })
 export class LoanFormParametersComponent {
   // Form controls for the loan parameters
-  principalLoan = new FormControl('');
-  yearlyInterestRate = new FormControl('');
-  numberOfYearsPayments = new FormControl('Select a loan term');
+  principalLoan = new FormControl(null);
+  yearlyInterestRate = new FormControl(null);
+  numberOfYearsPayments = new FormControl(null);
 
   // Variable to store the calculated monthly costs
   monthlyCosts: number | string = '';
