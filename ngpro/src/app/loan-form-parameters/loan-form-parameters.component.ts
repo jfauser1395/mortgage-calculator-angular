@@ -17,7 +17,7 @@ export class LoanFormParametersComponent {
   numberOfYearsPayments = new FormControl(null);
 
   // Variable to store the calculated monthly costs
-  monthlyCosts: number | string = '';
+  monthlyCosts: string[] = [];
 
   // Injecting the mortgage calculation service
   constructor(

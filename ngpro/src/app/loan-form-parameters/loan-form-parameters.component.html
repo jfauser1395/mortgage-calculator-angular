@@ -55,7 +55,9 @@
       </button>
     </form>
   </div>
-  <p class="flex-auto text-center p-5">
-    <span>{{ monthlyCosts }}</span>
-  </p>
+  @for (result of monthlyCosts; track result) {
+    <p class="flex-auto text-center p-5">
+      <span>{{ result }}</span>
+    </p>
+  }
 </section>
