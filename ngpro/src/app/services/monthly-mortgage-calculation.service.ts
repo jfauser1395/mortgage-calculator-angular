@@ -22,9 +22,9 @@ export class MonthlyMortgageCalculationService {
 
     if ((principalLoan && rate && numberOfYearsPayments) !== 0) {
       return (
-        `Your monthly costs: ${finalMonthlyPayment.toFixed(2)} $ \n` +
+        `Your total payment: ${totalPayment.toFixed(2)} $ \n` +
         `Your payed interests: ${payedInterest.toFixed(2)} $ \n` +
-        `Your total payment: ${totalPayment.toFixed(2)} $`
+        `Your monthly costs: ${finalMonthlyPayment.toFixed(2)} $`
       ).split('\n');
     } else {
       return ['Please enter all fields!'];

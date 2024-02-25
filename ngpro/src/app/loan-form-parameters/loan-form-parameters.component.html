@@ -54,10 +54,15 @@
         Calculate
       </button>
     </form>
+
+    <div
+      class="mt-10 rounded-md text-white bg-blue-700 hover:bg-blue-600 shadow-indigo-300"
+    >
+      @for (result of monthlyCosts; track result) {
+        <p class="px-3 py-2 flex-auto text-center p-5">
+          <span>{{ result }}</span>
+        </p>
+      }
+    </div>
   </div>
-  @for (result of monthlyCosts; track result) {
-    <p class="flex-auto text-center p-5">
-      <span>{{ result }}</span>
-    </p>
-  }
 </section>
