@@ -1,5 +1,5 @@
 <section>
-  <h1 class="text-center text-4xl font-serif p-3">Mortgage Calculator</h1>
+  <h1 class="mt-4 text-center text-4xl font-serif p-3">Mortgage Calculator</h1>
   <div class="flex-auto p-9 justify-center items-center">
     <form class="space-y-4" (ngSubmit)="onSubmit()">
       <label class="block">
@@ -56,10 +56,10 @@
     </form>
 
     <div
-      class="mt-10 rounded-md text-white bg-blue-700 hover:bg-blue-600 shadow-indigo-300"
+      class="mt-10 items-center rounded-md text-white bg-blue-700 hover:bg-blue-600 shadow-indigo-300"
     >
       @for (result of monthlyCosts; track result) {
-        <p class="px-3 py-2 flex-auto text-center p-5">
+        <p class="px-3 py-2 flex-auto text-center">
           <span>{{ result }}</span>
         </p>
       }
