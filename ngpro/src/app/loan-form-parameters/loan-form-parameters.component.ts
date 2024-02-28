@@ -15,6 +15,7 @@ export class LoanFormParametersComponent {
   principalLoan = new FormControl(null);
   yearlyInterestRate = new FormControl(null);
   numberOfYearsPayments = new FormControl(null);
+  downPayment = new FormControl(null);
 
   // Variable to store the calculated monthly costs
   monthlyCosts: string[] = [];
@@ -30,10 +31,11 @@ export class LoanFormParametersComponent {
     let pLoan = Number(this.principalLoan.value);
     let yInterestRate = Number(this.yearlyInterestRate.value);
     let nOfYearsPayments = Number(this.numberOfYearsPayments.value);
+    let dPayment = Number(this.downPayment.value);
 
     // Logging the parsed values
     console.log(
-      `Principal loan: ${pLoan}\nYearly interest rate: ${yInterestRate}\nNumber of years: ${nOfYearsPayments}`,
+      `Principal loan: ${pLoan}\nYearly interest rate: ${yInterestRate}\nNumber of years: ${nOfYearsPayments} \nDown payment made: ${dPayment}`,
     );
 
     // Calculating the monthly costs using the mortgage calculation service
@@ -42,6 +44,7 @@ export class LoanFormParametersComponent {
         pLoan,
         yInterestRate,
         nOfYearsPayments,
+        dPayment,
       );
 
     // Logging the calculated monthly costs

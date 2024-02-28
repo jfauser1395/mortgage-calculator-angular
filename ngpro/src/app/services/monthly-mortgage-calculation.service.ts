@@ -9,16 +9,18 @@ export class MonthlyMortgageCalculationService {
     principalLoan: number,
     rate: number,
     numberOfYearsPayments: number,
+    downPayments: number,
   ) {
     let monthlyInterestRate = rate / 100 / 12;
     let numberOfPayments = numberOfYearsPayments * 12;
+    let remLoan = principalLoan - downPayments;
 
     let finalMonthlyPayment =
-      (principalLoan * monthlyInterestRate) /
+      (remLoan * monthlyInterestRate) /
       (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
 
     let totalPayment = finalMonthlyPayment * numberOfPayments;
-    let payedInterest = totalPayment - principalLoan;
+    let payedInterest = totalPayment - remLoan;
 
     if ((principalLoan && rate && numberOfYearsPayments) !== 0) {
       return (
