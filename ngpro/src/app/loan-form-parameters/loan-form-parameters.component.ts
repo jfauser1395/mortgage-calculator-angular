@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { MonthlyMortgageCalculationService } from '../services/monthly-mortgage-calculation.service';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NumberFormatDirective } from '../directives/number-format.directive';
 
 @Component({
   selector: 'app-loan-form-parameters',
