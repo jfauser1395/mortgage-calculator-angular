@@ -2,12 +2,18 @@ import { Component, inject } from '@angular/core';
 import { MonthlyMortgageCalculationService } from '../services/monthly-mortgage-calculation.service';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { NumberFormatDirective } from '../directives/number-format.directive';
+import { NgxCurrencyDirective } from 'ngx-currency';
+import { NgxCurrencyInputMode } from 'ngx-currency';
 
 @Component({
   selector: 'app-loan-form-parameters',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, FlexLayoutModule],
+  imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    FlexLayoutModule,
+    NgxCurrencyDirective,
+  ],
   templateUrl: './loan-form-parameters.component.html',
   styleUrl: './loan-form-parameters.component.scss',
 })
@@ -51,4 +57,12 @@ export class LoanFormParametersComponent {
     // Logging the calculated monthly costs
     console.log(`Monthly costs: ${this.monthlyCosts}`);
   }
+  // Ngx Currency Input Mode option field
+  options = {
+    align: 'left',
+    prefix: '',
+    thousands: ',',
+    decimal: '.',
+    inputMode: NgxCurrencyInputMode.Natural,
+  };
 }

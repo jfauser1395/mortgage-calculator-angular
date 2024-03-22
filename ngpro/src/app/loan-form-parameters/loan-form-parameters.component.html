@@ -10,6 +10,8 @@
             >$</span
           >
           <input
+            currencyMask
+            [options]="options"
             type="text"
             inputmode="numeric"
             pattern="[0-9,.]+"
@@ -30,6 +32,8 @@
             >$</span
           >
           <input
+            currencyMask
+            [options]="options"
             type="text"
             inputmode="numeric"
             pattern="[0-9,.]+"
@@ -49,6 +53,8 @@
             >%</span
           >
           <input
+            currencyMask
+            [options]="options"
             type="text"
             inputmode="numeric"
             pattern="[0-9,.]+"
@@ -65,7 +71,7 @@
           inputmode="numeric"
           pattern="[0-9,.]+"
           [formControl]="numberOfYearsPayments"
-          placeholder="0.00"
+          placeholder="0"
           class="mt-2 mb-7 block w-full pl-2 py-2 bg-white border border-slate-300 text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-non invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 rounded-md"
         />
       </label>
