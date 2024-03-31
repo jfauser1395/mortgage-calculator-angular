@@ -10,7 +10,7 @@ export class MonthlyMortgageCalculationService {
     rate: number,
     numberOfYearsPayments: number,
     downPayments: number,
-  ) {
+  ): number[] {
     let monthlyInterestRate = rate / 100 / 12;
     let numberOfPayments = numberOfYearsPayments * 12;
     let remLoan = principalLoan - downPayments;
@@ -22,14 +22,10 @@ export class MonthlyMortgageCalculationService {
     let totalPayment = finalMonthlyPayment * numberOfPayments;
     let payedInterest = totalPayment - remLoan;
 
-    if ((principalLoan && rate && numberOfYearsPayments) !== 0) {
-      return (
-        `Your total payment: ${totalPayment.toFixed(2)} $ \n` +
-        `Your payed interests: ${payedInterest.toFixed(2)} $ \n` +
-        `Your monthly costs: ${finalMonthlyPayment.toFixed(2)} $`
-      ).split('\n');
-    } else {
-      return ['Please enter all fields!'];
-    }
+    return [
+      Number(totalPayment.toFixed(2)),
+      Number(payedInterest.toFixed(2)),
+      Number(finalMonthlyPayment.toFixed(2)),
+    ];
   }
 }
