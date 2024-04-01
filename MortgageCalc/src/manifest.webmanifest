@@ -1,8 +1,8 @@
 {
-  "name": "ngpro",
-  "short_name": "ngpro",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "MoCa",
+  "short_name": "MoCa",
+  "theme_color": "#f0f2f5",
+  "background_color": "#f0f2f5",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
